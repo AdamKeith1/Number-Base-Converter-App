@@ -3,6 +3,6 @@ Number base conversion tool that I use in my day to day ECE projects and homewor
 
 -------------------------------------------------------------------------
 Current Version:
-  - Supports 4 differemt operations
+  - Supports 4 different operations
   - Not deployed, still using the flask demo page
 -------------------------------------------------------------------------
