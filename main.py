@@ -14,7 +14,7 @@ def operation_result():
     error = None
     result = None
 
-    first_input = request.form['Input1'].lower() ## change
+    first_input = request.form['Input1'].lower()
     operation = request.form['operation']
 
     try:
