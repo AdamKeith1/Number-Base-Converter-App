@@ -31,7 +31,7 @@ def operation_result():
                 sum -= 1
                 
             result = sum
-
+        # Hex -> Decimal
         elif operation == "0x -> 0d":
             hex_map = {
                 'f': 15, 'e': 14, 'd': 13, 'c': 12, 'b': 11, 'a': 10

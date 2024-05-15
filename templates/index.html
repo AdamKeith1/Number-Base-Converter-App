@@ -7,23 +7,37 @@
     <link rel="stylesheet" type="text/css"
     href="{{ url_for('static', filename='converter.css') }}"/>
 </head>
-<body style="background-color:rgb(37, 40, 43); color:honeydew">
+<body style="background-color:rgb(30, 30, 30); color: #e488bb">
 <center>
     <h1>Python Number Base Converter</h1>
     <form method="post" action="{{ url_for('operation_result') }}" id="converter_form">
-            <span>Input</span>
-            <input type="text" name="Input1" id="Input1">
+            <!-- <span>Input</span> -->
+            <input type="text" name="Input1" id="Input1" placeholder="Input" class="input-field">
         <br/>
         <select id="operation" name="operation">
-            <option value="" selected disabled hidden>Select Conversion</option>
+            <option value="" selected disabled hidden>Select Radix</option>
             <option value="0b -> 0d">Binary -> Decimal</option> 
             <option value="0x -> 0d">Hexidecimal -> Decimal</option>
             <option value="0d -> 0b">Decimal -> Binary</option>
             <option value="0d -> 0x">Decimal -> Hexidecimal</option>
         </select>
         <br/>
-        <input type="submit" value="Submit"/>
-        <input type="reset"  value="RESET" style="color: red;"/>
+        <button class="bubble-button">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">Submit</span>
+        </button>
+        <button class="bubble-button">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">Reset</span>
+        </button>
     </form>
     {% if calculation_success == True %}
         <br/>
@@ -35,7 +49,7 @@
         <p>{{input1}} {{operation}} {{input2}} = "{{result}}"</p>
     {% endif %}
     <br/>
-    <h4>Note: Do not use prefixes such as '0x' or '0b' when entering input</h4>
+    <h4>Do not use prefixes such as '0x' or '0b' when entering input</h4>
 </center>
 </body>
 </html>
